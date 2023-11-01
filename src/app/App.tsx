@@ -1,12 +1,8 @@
 import { FC } from "react";
+import AppRouter from "./router/AppRouter";
 
 const App: FC = () => {
-  return (
-    <>
-      <p> App</p>
-      <p> App</p>
-    </>
-  );
+  return <AppRouter />;
 };
 
 export default App;
