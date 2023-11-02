@@ -1,8 +1,13 @@
 import { FC } from "react";
-import AppRouter from "./router/AppRouter";
+import AppRouter from "./router/ui/AppRouter";
+import { ErrorBoundary } from "./providers/ErrorBoundary";
 
 const App: FC = () => {
-  return <AppRouter />;
+  return (
+    <ErrorBoundary>
+      <AppRouter />
+    </ErrorBoundary>
+  );
 };
 
 export default App;
