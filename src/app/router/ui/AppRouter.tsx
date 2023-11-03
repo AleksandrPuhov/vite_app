@@ -2,22 +2,14 @@ import { FC, Suspense } from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 import { routerConfig } from "../config/routerConfig";
+import { Loader } from "@shared/ui/Loader/Loader";
 
-const AppRouter: FC = () => {
+export const AppRouter: FC = () => {
   const router = createBrowserRouter(routerConfig);
 
   return (
-    // <Suspense fallback={<Loader />}>
-    <Suspense
-      fallback={
-        <>
-          <p>Loader</p>
-        </>
-      }
-    >
+    <Suspense fallback={<Loader />}>
       <RouterProvider router={router} />
     </Suspense>
   );
 };
-
-export default AppRouter;

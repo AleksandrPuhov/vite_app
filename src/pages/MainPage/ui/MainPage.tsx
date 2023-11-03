@@ -5,6 +5,7 @@ export const MainPage: FC = () => {
     <>
       <p>MainPage</p>
       <p>MainPage</p>
+      {/* <Loader /> */}
     </>
   );
 };
