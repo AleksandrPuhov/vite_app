@@ -1,4 +1,5 @@
 import { Loader } from "@shared/ui/Loader/Loader";
+import { PageError } from "@widgets/PageError";
 import React, { ErrorInfo, ReactNode, Suspense } from "react";
 
 interface ErrorBoundaryProps {
@@ -35,10 +36,7 @@ class ErrorBoundary extends React.Component<
       // You can render any custom fallback UI
       return (
         <Suspense fallback={<Loader />}>
-          {/* <PageError /> */}
-          <>
-            <p>PageError</p>
-          </>
+          <PageError />
         </Suspense>
       );
     }

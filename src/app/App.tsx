@@ -6,11 +6,11 @@ import { AppRouter } from "./router";
 
 const App: FC = () => {
   return (
-    <ErrorBoundary>
-      <MantineProvider>
+    <MantineProvider>
+      <ErrorBoundary>
         <AppRouter />
-      </MantineProvider>
-    </ErrorBoundary>
+      </ErrorBoundary>
+    </MantineProvider>
   );
 };
 

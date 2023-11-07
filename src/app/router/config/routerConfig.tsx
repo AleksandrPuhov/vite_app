@@ -1,5 +1,5 @@
 import { Layout } from "@app/layout/Layout";
-import { NotFoundPage } from "@pages/NotFoundPage";
+import { NotFoundPage } from "@shared/ui/NotFoundPage";
 
 export const routerConfig = [
   {
