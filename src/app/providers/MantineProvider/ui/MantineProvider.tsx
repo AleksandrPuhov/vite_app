@@ -10,7 +10,7 @@ interface IMantineProvProps {
 export const MantineProv: FC<IMantineProvProps> = ({ children }) => {
   const theme1 = createTheme({
     /** Put your mantine theme override here */
-    primaryColor: "cyan",
+    // primaryColor: "cyan",
   });
 
   return <MantineProvider theme={theme1}>{children}</MantineProvider>;
