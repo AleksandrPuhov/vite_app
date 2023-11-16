@@ -48,9 +48,13 @@ server.post("/login", (req, res) => {
 
 // проверяем, авторизован ли пользователь
 server.use((req, res, next) => {
-  if (!req.headers.authorization) {
-    return res.status(403).json({ message: "AUTH ERROR" });
-  }
+  // console.log("req", req.url);
+
+  // const urlWithAuth = ["/profile", "/comments"];
+
+  // if (!req.headers.authorization) {
+  //   return res.status(403).json({ message: "AUTH ERROR" });
+  // }
 
   next();
 });
@@ -59,5 +63,5 @@ server.use(router);
 
 // запуск сервера
 server.listen(process.env.JSON_SERVER_PORT, () => {
-  console.log("server is running on" + port + "port");
+  console.log("server is running on " + port + " port");
 });
