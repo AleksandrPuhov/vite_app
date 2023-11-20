@@ -1,0 +1,21 @@
+.root {
+  margin-top: rem(80px);
+  border-top: rem(1px) solid
+    light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
+}
+.inner {
+  padding-top: rem(40px);
+  padding-bottom: rem(60px);
+}
+
+.afterFooter {
+  padding-top: rem(20px);
+  padding-bottom: rem(20px);
+  background-color: light-dark(
+    var(--mantine-color-gray-0),
+    var(--mantine-color-dark-6)
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -3,6 +3,8 @@ import { Outlet } from "react-router-dom";
 
 import styles from "./Layout.module.css";
 
+import { Footer } from "@widgets/Footer/ui/Footer";
+
 export const Layout: FC = () => {
   return (
     <>
@@ -10,7 +12,7 @@ export const Layout: FC = () => {
       <div className={styles.mainWrapp}>
         <div className={styles.headerWrapp}>header</div>
         <Outlet />
-        <div>footer</div>
+        <Footer />
       </div>
     </>
   );
