@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import styles from "./Footer.module.css";
 
-import { Container, rem } from "@mantine/core";
+import { Anchor, Box, Container, Flex, rem } from "@mantine/core";
 import { FooterBottom } from "./FooterBottom/FooterBottom";
 import { Logo } from "@shared/ui/icons/logo/logo";
 import { Link } from "react-router-dom";
@@ -37,6 +37,8 @@ import { Link } from "react-router-dom";
 //   },
 // ];
 
+const FOOTER_PHONE_NUM = "+7 (333) 444-55-66";
+
 export const Footer: FC = () => {
   // const groups = data.map((group) => {
   //   const links = group.links.map((link, index) => (
@@ -65,13 +67,25 @@ export const Footer: FC = () => {
         <Link to={"/"}>
           <Logo style={{ width: rem(45), height: rem(45) }} />
         </Link>
-        top Footer
-        {/* <div className={classes.logo}>
-          <MantineLogo size={30} />
-          <Text size="xs" c="dimmed" className={classes.description}>
-            Build fully functional accessible web applications faster than ever
-          </Text>
-        </div> */}
+        <Flex
+          mih={rem(50)}
+          gap={rem(20)}
+          justify="space-between"
+          align="center"
+          w={"100%"}
+        >
+          <div>
+            <Anchor
+              href={"mailto:" + FOOTER_PHONE_NUM}
+              fz="lg"
+              fw={700}
+              c="gray.6"
+            >
+              {FOOTER_PHONE_NUM}
+            </Anchor>
+          </div>
+          <div>right</div>
+        </Flex>
         {/* <div className={classes.groups}>{groups}</div> */}
       </Container>
 

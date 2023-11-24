@@ -6,4 +6,6 @@
 .inner {
   padding-top: rem(40px);
   padding-bottom: rem(60px);
+  display: flex;
+  gap: rem(20px);
 }
