@@ -1,11 +1,14 @@
 import { FC } from "react";
+import { Link } from "react-router-dom";
 
 import styles from "./Footer.module.css";
 
-import { Anchor, Box, Container, Flex, rem } from "@mantine/core";
-import { FooterBottom } from "./FooterBottom/FooterBottom";
 import { Logo } from "@shared/ui/icons/logo/logo";
-import { Link } from "react-router-dom";
+
+import { Anchor, Button, Container, Flex, rem } from "@mantine/core";
+import { modals } from "@mantine/modals";
+
+import { FooterBottom } from "./FooterBottom/FooterBottom";
 
 // const data = [
 //   {
@@ -83,6 +86,16 @@ export const Footer: FC = () => {
             >
               {FOOTER_PHONE_NUM}
             </Anchor>
+            <Button
+              onClick={() => {
+                modals.openContextModal({
+                  modal: "backCall",
+                  innerProps: null,
+                });
+              }}
+            >
+              Open content modal
+            </Button>
           </div>
           <div>right</div>
         </Flex>
